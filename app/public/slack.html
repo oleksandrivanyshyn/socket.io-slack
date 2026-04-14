@@ -5,7 +5,6 @@
 <div class="container-fluid">
     <div class="row">
         <div class="namespaces">
-            <!-- Populated from the socket server! -->
         </div>
         <div class="rooms">
             <div class="main-rooms">
@@ -18,7 +17,7 @@
                 </ul>
             </div>
             <div class="dm">
-                <h6 class="pointer">
+                <h6" class="pointer">
                     <i class="room-caret fa-solid fa-caret-down"></i>Direct Messages
                 </h6>
                 <ul class="room-list">
@@ -87,6 +86,7 @@
 </div>
 
 <script src="/socket.io/socket.io.js"></script>
+<script src="/buildMessageHtml.js"></script>
+<script src="/joinRoom.js"></script>
 <script src="/joinNs.js"></script>
 <script src="/scripts.js"></script>
-
