@@ -17,5 +17,8 @@ io.on('connection', (socket) => {
     socket.emit('nsList', namespaces)
 })
 
-
-
+namespaces.forEach(namespace => {
+    io.of(namespace.endpoint).on('connection', (socket) => {
+        console.log(namespace.endpoint);
+    });
+})
