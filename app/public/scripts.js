@@ -7,14 +7,21 @@ socket.on('connect', () => {
 })
 socket.on('nsList', (nsData) => {
     console.log(nsData);
+    const nameSpacesDiv = document.querySelector('.namespaces');
     nsData.forEach((ns) => {
-        const nameSpacesDiv = document.querySelector('.namespaces');
-        const nsDiv = document.createElement('div');
-        nsDiv.classList.add('namespace');
-        nsDiv.innerHTML = `
-            <img src="${ns.image}" />
-            <span>${ns.endpoint}</span>
-        `
-        nameSpacesDiv.appendChild(nsDiv);
+        nameSpacesDiv.innerHTML += `<div class="namespace" ns="${ns.endpoint}"><img src="${ns.image}" /><span>${ns.endpoint}</span></div>`;
+    });
+    Array.from(document.getElementsByClassName('namespace')).forEach((elem) => {
+        elem.addEventListener('click', () => {
+            const nsEndpoint = elem.getAttribute('ns');
+            const clickedNs = nsData.find(row => row.endpoint === nsEndpoint);
+            const rooms = clickedNs.rooms;
+            let roomList = document.querySelector('.room-list');
+            roomList.innerHTML = '';
+            rooms.forEach(room => {
+                roomList.innerHTML += `<li><span class="glyphicon glyphicon-lock"></span>${room.roomTitle}</li>`
+            })
+
+        });
     });
 })
