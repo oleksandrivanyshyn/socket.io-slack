@@ -12,7 +12,7 @@ socket.on('nsList', (nsData) => {
         const nsDiv = document.createElement('div');
         nsDiv.classList.add('namespace');
         nsDiv.innerHTML = `
-            <img src="${ns.img}" />
+            <img src="${ns.image}" />
             <span>${ns.endpoint}</span>
         `
         nameSpacesDiv.appendChild(nsDiv);
