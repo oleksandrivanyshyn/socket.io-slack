@@ -30,7 +30,7 @@ A real-time chat application that mimics Slack's architecture using **Socket.io*
    ```bash
    npm run dev
    ```
-   *The server will start on port 9000.*
+   *The server will start on port 9000. go to http://localhost:9000/slack.html*
 
 ## 📖 Project Architecture
 The project follows a class-based structure for clean data management:
