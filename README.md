@@ -20,7 +20,7 @@ A real-time chat application that mimics Slack's architecture using **Socket.io*
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/socket.io-slack.git
+   git clone https://github.com/oleksandrivanyshyn/socket.io-slack.git
    ```
 2. **Install dependencies:**
    ```bash
